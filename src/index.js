@@ -2,6 +2,7 @@ import React, {Component} from 'react'; // Need React libary to create and manag
 import ReactDOM from 'react-dom'; // To interact with actual DOM
 import YTSearch  from 'youtube-api-search'; // libarary to search item 
 import SearchBar from './components/search_bar';
+import VideoList from './components/video_list';
 const API_KEY = 'AIzaSyCa0N0I9Fb0wkUURLwSSaqV2FyidTKfF8s'; // to make request to Youtube
 
 // Create a new component. This component should produce 
@@ -21,6 +22,9 @@ class App extends Component {    // When app boots up, Constructor will be loade
         return (
             <div>
                 <SearchBar />
+                {/* // Pass data from parent component to child component
+                    passing data in React is called props */}
+                <VideoList videos={this.state.videos} />
             </div>
         );  // JSX stuff that looks like html with Babel & WebPack
     }
