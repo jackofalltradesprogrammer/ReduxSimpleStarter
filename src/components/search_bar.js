@@ -1,4 +1,5 @@
-import React from 'react'; // we need React because JSX uses react to render
+import React, { Component } from 'react'; // we need React because JSX uses react to render
+// {} braces mean pull out Component and assign it to the variable Component
 
 // A functional component vs a class component to keep track of data entered using ES6 class
 // const SearchBar = () => {
@@ -6,9 +7,14 @@ import React from 'react'; // we need React because JSX uses react to render
 // };
 
 // a class that gets functionality of component super class of React
-class SearchBar extends React.Component{
+class SearchBar extends Component {
     render() { // Must method to render component and returns JSX
-        return <input />;
+        return <input onChange={this.onInputChange}/>; // add event "onChange" to the element with OnInputChange() event handler
+    }
+
+    // event handler
+    onInputChange(event) { // "event" can be any argument
+        console.log(event.target.value);
     }
 }
 

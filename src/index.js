@@ -12,7 +12,7 @@ const App = () => {    // const is declaring a variable but it's constant and is
         <div>
             <SearchBar />
         </div>
-    );  // stuff that looks like html
+    );  // JSX stuff that looks like html with Babel & WebPack
 }
 
 // Take this component's generated HTML and put it
