@@ -21,7 +21,9 @@ class SearchBar extends Component {
         return (
             // add event "onChange" to the element with  event handler
             <div>            
-                <input onChange={event => this.setState({term: event.target.value})} />
+                <input
+                    value ={this.state.term} // a controlled component, it means the value will change only if state changes (test by typing)
+                    onChange={event => this.setState({term: event.target.value})} />
             </div>
         ); 
     }   
