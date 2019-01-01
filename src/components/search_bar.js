@@ -6,10 +6,24 @@ import React, { Component } from 'react'; // we need React because JSX uses reac
 //     return <input />
 // };
 
+
+
 // a class that gets functionality of component super class of React
 class SearchBar extends Component {
+    // define State of a component class
+    constructor(props) {
+        super(props); // calling the constructor of  super Component of REACT class
+
+        this.state = { term: ''}; // Record property "term" in the state ** this syntax is not used again in the class
+    }
     render() { // Must method to render component and returns JSX
-        return <input onChange={event => console.log(event.target.value)}/>; // add event "onChange" to the element with OnInputChange() event handler
+        // change the "term" property in state of the object 
+        return (
+            // add event "onChange" to the element with  event handler
+            <div>            
+                <input onChange={event => this.setState({term: event.target.value})} />
+            </div>
+        ); 
     }   
 }
 
