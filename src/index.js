@@ -1,7 +1,7 @@
 import React from 'react'; // Need React libary to create and manage our components
 import ReactDOM from 'react-dom'; // To interact with actual DOM
 
-const API_KEY = 'AIzaSyCa0N0I9Fb0wkUURLwSSaqV2FyidTKfF8s';
+const API_KEY = 'AIzaSyCa0N0I9Fb0wkUURLwSSaqV2FyidTKfF8s'; // to make request to Youtube
 
 // Create a new component. This component should produce 
 // some html. A component is a function or an object that returns some amount of html
